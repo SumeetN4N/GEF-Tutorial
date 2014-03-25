@@ -23,6 +23,7 @@ import ru.artem.phd.opm.model.*;
  * @generated
  */
 public class OPMSwitch<T> extends Switch<T> {
+	
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
