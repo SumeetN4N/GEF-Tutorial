@@ -7,9 +7,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: opm,
- opm.impl,
- opm.util
+Export-Package: ru.artem.phd.opm.model,
+ ru.artem.phd.opm.model.impl,
+ ru.artem.phd.opm.model.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore
 Bundle-ActivationPolicy: lazy

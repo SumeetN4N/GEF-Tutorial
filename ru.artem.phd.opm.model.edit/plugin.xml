@@ -10,7 +10,7 @@
       <!-- @generated opm -->
       <factory
             uri="www.vainolo.com/phd/opm"
-            class="opm.provider.OPMItemProviderAdapterFactory"
+            class="ru.artem.phd.opm.model.provider.OPMItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

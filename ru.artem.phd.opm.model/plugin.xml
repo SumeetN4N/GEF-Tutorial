@@ -10,7 +10,7 @@
       <!-- @generated opm -->
       <package
             uri="www.vainolo.com/phd/opm"
-            class="opm.OPMPackage"
+            class="ru.artem.phd.opm.model.OPMPackage"
             genModel="model/opm.genmodel"/>
    </extension>
 

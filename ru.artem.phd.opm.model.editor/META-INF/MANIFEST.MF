@@ -4,11 +4,11 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: ru.artem.phd.opm.model.editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: opm.presentation.OPMEditorPlugin$Implementation
+Bundle-Activator: ru.artem.phd.opm.model.presentation.OPMEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: opm.presentation
+Export-Package: ru.artem.phd.opm.model.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  ru.artem.phd.opm.model.edit;visibility:=reexport,
