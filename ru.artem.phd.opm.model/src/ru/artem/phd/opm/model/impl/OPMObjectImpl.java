@@ -2,6 +2,7 @@
  */
 package ru.artem.phd.opm.model.impl;
 
+import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -25,6 +26,7 @@ import ru.artem.phd.opm.model.ObjectProcessDiagram;
  * <ul>
  *   <li>{@link ru.artem.phd.opm.model.impl.OPMObjectImpl#getName <em>Name</em>}</li>
  *   <li>{@link ru.artem.phd.opm.model.impl.OPMObjectImpl#getOpd <em>Opd</em>}</li>
+ *   <li>{@link ru.artem.phd.opm.model.impl.OPMObjectImpl#getConstraints <em>Constraints</em>}</li>
  * </ul>
  * </p>
  *
@@ -50,6 +52,26 @@ public class OPMObjectImpl extends OPMThingImpl implements OPMObject {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getConstraints() <em>Constraints</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConstraints()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Rectangle CONSTRAINTS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConstraints()
+	 * @generated
+	 * @ordered
+	 */
+	protected Rectangle constraints = CONSTRAINTS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -137,6 +159,27 @@ public class OPMObjectImpl extends OPMThingImpl implements OPMObject {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Rectangle getConstraints() {
+		return constraints;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setConstraints(Rectangle newConstraints) {
+		Rectangle oldConstraints = constraints;
+		constraints = newConstraints;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OPMPackage.OPM_OBJECT__CONSTRAINTS, oldConstraints, constraints));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -188,6 +231,8 @@ public class OPMObjectImpl extends OPMThingImpl implements OPMObject {
 				return getName();
 			case OPMPackage.OPM_OBJECT__OPD:
 				return getOpd();
+			case OPMPackage.OPM_OBJECT__CONSTRAINTS:
+				return getConstraints();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -205,6 +250,9 @@ public class OPMObjectImpl extends OPMThingImpl implements OPMObject {
 				return;
 			case OPMPackage.OPM_OBJECT__OPD:
 				setOpd((ObjectProcessDiagram)newValue);
+				return;
+			case OPMPackage.OPM_OBJECT__CONSTRAINTS:
+				setConstraints((Rectangle)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -224,6 +272,9 @@ public class OPMObjectImpl extends OPMThingImpl implements OPMObject {
 			case OPMPackage.OPM_OBJECT__OPD:
 				setOpd((ObjectProcessDiagram)null);
 				return;
+			case OPMPackage.OPM_OBJECT__CONSTRAINTS:
+				setConstraints(CONSTRAINTS_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -240,6 +291,8 @@ public class OPMObjectImpl extends OPMThingImpl implements OPMObject {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case OPMPackage.OPM_OBJECT__OPD:
 				return getOpd() != null;
+			case OPMPackage.OPM_OBJECT__CONSTRAINTS:
+				return CONSTRAINTS_EDEFAULT == null ? constraints != null : !CONSTRAINTS_EDEFAULT.equals(constraints);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -256,6 +309,8 @@ public class OPMObjectImpl extends OPMThingImpl implements OPMObject {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", constraints: ");
+		result.append(constraints);
 		result.append(')');
 		return result.toString();
 	}

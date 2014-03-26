@@ -4,6 +4,7 @@ package ru.artem.phd.opm.model;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -204,13 +205,22 @@ public interface OPMPackage extends EPackage {
 	int OPM_OBJECT__OPD = OPM_THING_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Constraints</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPM_OBJECT__CONSTRAINTS = OPM_THING_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Object</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPM_OBJECT_FEATURE_COUNT = OPM_THING_FEATURE_COUNT + 2;
+	int OPM_OBJECT_FEATURE_COUNT = OPM_THING_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Object</em>' class.
@@ -342,6 +352,17 @@ public interface OPMPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '<em>Rectangle</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.draw2d.geometry.Rectangle
+	 * @see ru.artem.phd.opm.model.impl.OPMPackageImpl#getRectangle()
+	 * @generated
+	 */
+	int RECTANGLE = 5;
+
+
+	/**
 	 * Returns the meta object for class '{@link ru.artem.phd.opm.model.ObjectProcessDiagram <em>Object Process Diagram</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -415,6 +436,17 @@ public interface OPMPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getOPMObject_Opd();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ru.artem.phd.opm.model.OPMObject#getConstraints <em>Constraints</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Constraints</em>'.
+	 * @see ru.artem.phd.opm.model.OPMObject#getConstraints()
+	 * @see #getOPMObject()
+	 * @generated
+	 */
+	EAttribute getOPMObject_Constraints();
 
 	/**
 	 * Returns the meta object for class '{@link ru.artem.phd.opm.model.OPMProcess <em>Process</em>}'.
@@ -524,6 +556,17 @@ public interface OPMPackage extends EPackage {
 	EReference getOPMThing_OutgoingLinks();
 
 	/**
+	 * Returns the meta object for data type '{@link org.eclipse.draw2d.geometry.Rectangle <em>Rectangle</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Rectangle</em>'.
+	 * @see org.eclipse.draw2d.geometry.Rectangle
+	 * @model instanceClass="org.eclipse.draw2d.geometry.Rectangle"
+	 * @generated
+	 */
+	EDataType getRectangle();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -605,6 +648,14 @@ public interface OPMPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OPM_OBJECT__OPD = eINSTANCE.getOPMObject_Opd();
+
+		/**
+		 * The meta object literal for the '<em><b>Constraints</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OPM_OBJECT__CONSTRAINTS = eINSTANCE.getOPMObject_Constraints();
 
 		/**
 		 * The meta object literal for the '{@link ru.artem.phd.opm.model.impl.OPMProcessImpl <em>Process</em>}' class.
@@ -691,6 +742,16 @@ public interface OPMPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OPM_THING__OUTGOING_LINKS = eINSTANCE.getOPMThing_OutgoingLinks();
+
+		/**
+		 * The meta object literal for the '<em>Rectangle</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.draw2d.geometry.Rectangle
+		 * @see ru.artem.phd.opm.model.impl.OPMPackageImpl#getRectangle()
+		 * @generated
+		 */
+		EDataType RECTANGLE = eINSTANCE.getRectangle();
 
 	}
 

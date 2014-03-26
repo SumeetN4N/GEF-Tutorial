@@ -2,7 +2,9 @@
  */
 package ru.artem.phd.opm.model.impl;
 
+import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -13,16 +15,15 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import ru.artem.phd.opm.model.*;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model <b>Factory</b>.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!--
+ * end-user-doc -->
  * @generated
  */
 public class OPMFactoryImpl extends EFactoryImpl implements OPMFactory {
 	/**
 	 * Creates the default factory implementation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @generated
 	 */
 	public static OPMFactory init() {
@@ -40,8 +41,8 @@ public class OPMFactoryImpl extends EFactoryImpl implements OPMFactory {
 
 	/**
 	 * Creates an instance of the factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @generated
 	 */
 	public OPMFactoryImpl() {
@@ -49,8 +50,7 @@ public class OPMFactoryImpl extends EFactoryImpl implements OPMFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -67,8 +67,35 @@ public class OPMFactoryImpl extends EFactoryImpl implements OPMFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case OPMPackage.RECTANGLE:
+				return createRectangleFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case OPMPackage.RECTANGLE:
+				return convertRectangleToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ObjectProcessDiagram createObjectProcessDiagram() {
@@ -77,8 +104,7 @@ public class OPMFactoryImpl extends EFactoryImpl implements OPMFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public OPMObject createOPMObject() {
@@ -87,8 +113,7 @@ public class OPMFactoryImpl extends EFactoryImpl implements OPMFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public OPMProcess createOPMProcess() {
@@ -97,8 +122,7 @@ public class OPMFactoryImpl extends EFactoryImpl implements OPMFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public OPMLink createOPMLink() {
@@ -107,8 +131,7 @@ public class OPMFactoryImpl extends EFactoryImpl implements OPMFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public OPMThing createOPMThing() {
@@ -117,8 +140,47 @@ public class OPMFactoryImpl extends EFactoryImpl implements OPMFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated NOT
+	 */
+	public Rectangle createRectangleFromString(EDataType eDataType,
+			String initialValue) {
+		if (initialValue == null)
+			return null;
+		initialValue.replaceAll("\\s", "");
+		String[] values = initialValue.split(",");
+		if (values.length != 4)
+			return null;
+		Rectangle rect = new Rectangle();
+		try {
+			rect.setLocation(Integer.parseInt(values[0]),
+					Integer.parseInt(values[1]));
+			rect.setSize(Integer.parseInt(values[2]),
+					Integer.parseInt(values[3]));
+		} catch (NumberFormatException ex) {
+			EcorePlugin.INSTANCE.log(ex);
+			rect = null;
+		}
+
+		return rect;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated NOT
+	 */
+	public String convertRectangleToString(EDataType eDataType,
+			Object instanceValue) {
+		if (instanceValue == null)
+			return null;
+		Rectangle rect = (Rectangle) instanceValue;
+		return rect.x + "," + rect.y + "," + rect.width + "," + rect.height;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public OPMPackage getOPMPackage() {
@@ -126,8 +188,7 @@ public class OPMFactoryImpl extends EFactoryImpl implements OPMFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @deprecated
 	 * @generated
 	 */
@@ -136,4 +197,4 @@ public class OPMFactoryImpl extends EFactoryImpl implements OPMFactory {
 		return OPMPackage.eINSTANCE;
 	}
 
-} //OPMFactoryImpl
+} // OPMFactoryImpl

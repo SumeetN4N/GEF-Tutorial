@@ -58,6 +58,7 @@ public class OPMObjectItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addConstraintsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -76,6 +77,28 @@ public class OPMObjectItemProvider
 				 getString("_UI_OPMObject_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OPMObject_name_feature", "_UI_OPMObject_type"),
 				 OPMPackage.Literals.OPM_OBJECT__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Constraints feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addConstraintsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OPMObject_constraints_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OPMObject_constraints_feature", "_UI_OPMObject_type"),
+				 OPMPackage.Literals.OPM_OBJECT__CONSTRAINTS,
 				 true,
 				 false,
 				 false,
@@ -122,6 +145,7 @@ public class OPMObjectItemProvider
 
 		switch (notification.getFeatureID(OPMObject.class)) {
 			case OPMPackage.OPM_OBJECT__NAME:
+			case OPMPackage.OPM_OBJECT__CONSTRAINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

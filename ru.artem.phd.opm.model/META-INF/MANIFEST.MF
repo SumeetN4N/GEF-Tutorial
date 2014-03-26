@@ -11,5 +11,6 @@ Export-Package: ru.artem.phd.opm.model,
  ru.artem.phd.opm.model.impl,
  ru.artem.phd.opm.model.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore
+ org.eclipse.emf.ecore,
+ org.eclipse.draw2d;bundle-version="[3.9.0,4.0.0)"
 Bundle-ActivationPolicy: lazy

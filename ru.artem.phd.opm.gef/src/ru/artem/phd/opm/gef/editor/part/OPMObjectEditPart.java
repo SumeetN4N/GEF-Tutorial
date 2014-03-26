@@ -11,7 +11,7 @@ import ru.artem.phd.opm.model.OPMObject;
 
 public class OPMObjectEditPart extends AbstractGraphicalEditPart {
 	Random rand = new Random();
-	
+
 	@Override
 	protected IFigure createFigure() {
 		return new OPMObjectFigure();
@@ -26,10 +26,12 @@ public class OPMObjectEditPart extends AbstractGraphicalEditPart {
 		OPMObjectFigure figure = (OPMObjectFigure) getFigure();
 		OPMObject model = (OPMObject) getModel();
 		ObjectProcessDiagramEditPart parent = (ObjectProcessDiagramEditPart) getParent();
-		
+
 		figure.getLabel().setText(model.getName());
-		Rectangle layout = new Rectangle(rand.nextInt(300), rand.nextInt(300), 50, 50);
+		Rectangle layout = new Rectangle(model.getConstraints().x,
+				model.getConstraints().y, model.getConstraints().width,
+				model.getConstraints().height);
 		parent.setLayoutConstraint(this, figure, layout);
-		
+
 	}
 }
