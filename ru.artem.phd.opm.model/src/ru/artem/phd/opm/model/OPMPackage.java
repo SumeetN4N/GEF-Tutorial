@@ -58,32 +58,14 @@ public interface OPMPackage extends EPackage {
 	OPMPackage eINSTANCE = ru.artem.phd.opm.model.impl.OPMPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link ru.artem.phd.opm.model.impl.ObjectProcessDiagramImpl <em>Object Process Diagram</em>}' class.
+	 * The meta object id for the '{@link ru.artem.phd.opm.model.impl.OPMObjectProcessDiagramImpl <em>Object Process Diagram</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ru.artem.phd.opm.model.impl.ObjectProcessDiagramImpl
-	 * @see ru.artem.phd.opm.model.impl.OPMPackageImpl#getObjectProcessDiagram()
+	 * @see ru.artem.phd.opm.model.impl.OPMObjectProcessDiagramImpl
+	 * @see ru.artem.phd.opm.model.impl.OPMPackageImpl#getOPMObjectProcessDiagram()
 	 * @generated
 	 */
-	int OBJECT_PROCESS_DIAGRAM = 0;
-
-	/**
-	 * The feature id for the '<em><b>Objects</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBJECT_PROCESS_DIAGRAM__OBJECTS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Processes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBJECT_PROCESS_DIAGRAM__PROCESSES = 1;
+	int OPM_OBJECT_PROCESS_DIAGRAM = 0;
 
 	/**
 	 * The feature id for the '<em><b>Links</b></em>' containment reference list.
@@ -92,7 +74,16 @@ public interface OPMPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT_PROCESS_DIAGRAM__LINKS = 2;
+	int OPM_OBJECT_PROCESS_DIAGRAM__LINKS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Things</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPM_OBJECT_PROCESS_DIAGRAM__THINGS = 1;
 
 	/**
 	 * The number of structural features of the '<em>Object Process Diagram</em>' class.
@@ -101,7 +92,7 @@ public interface OPMPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT_PROCESS_DIAGRAM_FEATURE_COUNT = 3;
+	int OPM_OBJECT_PROCESS_DIAGRAM_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Object Process Diagram</em>' class.
@@ -110,7 +101,7 @@ public interface OPMPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT_PROCESS_DIAGRAM_OPERATION_COUNT = 0;
+	int OPM_OBJECT_PROCESS_DIAGRAM_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link ru.artem.phd.opm.model.impl.OPMThingImpl <em>Thing</em>}' class.
@@ -123,7 +114,7 @@ public interface OPMPackage extends EPackage {
 	int OPM_THING = 4;
 
 	/**
-	 * The feature id for the '<em><b>Incoming Links</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Incoming Links</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -132,7 +123,7 @@ public interface OPMPackage extends EPackage {
 	int OPM_THING__INCOMING_LINKS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Outgoing Links</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Outgoing Links</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -141,13 +132,40 @@ public interface OPMPackage extends EPackage {
 	int OPM_THING__OUTGOING_LINKS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Constraints</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPM_THING__CONSTRAINTS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPM_THING__NAME = 3;
+
+	/**
+	 * The feature id for the '<em><b>Opd</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPM_THING__OPD = 4;
+
+	/**
 	 * The number of structural features of the '<em>Thing</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPM_THING_FEATURE_COUNT = 2;
+	int OPM_THING_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Thing</em>' class.
@@ -169,7 +187,7 @@ public interface OPMPackage extends EPackage {
 	int OPM_OBJECT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Incoming Links</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Incoming Links</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -178,7 +196,7 @@ public interface OPMPackage extends EPackage {
 	int OPM_OBJECT__INCOMING_LINKS = OPM_THING__INCOMING_LINKS;
 
 	/**
-	 * The feature id for the '<em><b>Outgoing Links</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Outgoing Links</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -187,13 +205,22 @@ public interface OPMPackage extends EPackage {
 	int OPM_OBJECT__OUTGOING_LINKS = OPM_THING__OUTGOING_LINKS;
 
 	/**
+	 * The feature id for the '<em><b>Constraints</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPM_OBJECT__CONSTRAINTS = OPM_THING__CONSTRAINTS;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPM_OBJECT__NAME = OPM_THING_FEATURE_COUNT + 0;
+	int OPM_OBJECT__NAME = OPM_THING__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Opd</b></em>' container reference.
@@ -202,16 +229,7 @@ public interface OPMPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPM_OBJECT__OPD = OPM_THING_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Constraints</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPM_OBJECT__CONSTRAINTS = OPM_THING_FEATURE_COUNT + 2;
+	int OPM_OBJECT__OPD = OPM_THING__OPD;
 
 	/**
 	 * The number of structural features of the '<em>Object</em>' class.
@@ -220,7 +238,7 @@ public interface OPMPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPM_OBJECT_FEATURE_COUNT = OPM_THING_FEATURE_COUNT + 3;
+	int OPM_OBJECT_FEATURE_COUNT = OPM_THING_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Object</em>' class.
@@ -242,7 +260,7 @@ public interface OPMPackage extends EPackage {
 	int OPM_PROCESS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Incoming Links</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Incoming Links</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -251,7 +269,7 @@ public interface OPMPackage extends EPackage {
 	int OPM_PROCESS__INCOMING_LINKS = OPM_THING__INCOMING_LINKS;
 
 	/**
-	 * The feature id for the '<em><b>Outgoing Links</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Outgoing Links</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -260,13 +278,22 @@ public interface OPMPackage extends EPackage {
 	int OPM_PROCESS__OUTGOING_LINKS = OPM_THING__OUTGOING_LINKS;
 
 	/**
+	 * The feature id for the '<em><b>Constraints</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPM_PROCESS__CONSTRAINTS = OPM_THING__CONSTRAINTS;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPM_PROCESS__NAME = OPM_THING_FEATURE_COUNT + 0;
+	int OPM_PROCESS__NAME = OPM_THING__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Opd</b></em>' container reference.
@@ -275,7 +302,7 @@ public interface OPMPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPM_PROCESS__OPD = OPM_THING_FEATURE_COUNT + 1;
+	int OPM_PROCESS__OPD = OPM_THING__OPD;
 
 	/**
 	 * The number of structural features of the '<em>Process</em>' class.
@@ -284,7 +311,7 @@ public interface OPMPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPM_PROCESS_FEATURE_COUNT = OPM_THING_FEATURE_COUNT + 2;
+	int OPM_PROCESS_FEATURE_COUNT = OPM_THING_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Process</em>' class.
@@ -306,16 +333,16 @@ public interface OPMPackage extends EPackage {
 	int OPM_LINK = 3;
 
 	/**
-	 * The feature id for the '<em><b>Opm</b></em>' container reference.
+	 * The feature id for the '<em><b>Opd</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPM_LINK__OPM = 0;
+	int OPM_LINK__OPD = 0;
 
 	/**
-	 * The feature id for the '<em><b>Source</b></em>' container reference.
+	 * The feature id for the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -324,7 +351,7 @@ public interface OPMPackage extends EPackage {
 	int OPM_LINK__SOURCE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Target</b></em>' container reference.
+	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -333,13 +360,22 @@ public interface OPMPackage extends EPackage {
 	int OPM_LINK__TARGET = 2;
 
 	/**
+	 * The feature id for the '<em><b>Bendpoints</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPM_LINK__BENDPOINTS = 3;
+
+	/**
 	 * The number of structural features of the '<em>Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPM_LINK_FEATURE_COUNT = 3;
+	int OPM_LINK_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Link</em>' class.
@@ -363,47 +399,47 @@ public interface OPMPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link ru.artem.phd.opm.model.ObjectProcessDiagram <em>Object Process Diagram</em>}'.
+	 * The meta object id for the '<em>Point</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.draw2d.geometry.Point
+	 * @see ru.artem.phd.opm.model.impl.OPMPackageImpl#getPoint()
+	 * @generated
+	 */
+	int POINT = 6;
+
+
+	/**
+	 * Returns the meta object for class '{@link ru.artem.phd.opm.model.OPMObjectProcessDiagram <em>Object Process Diagram</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Object Process Diagram</em>'.
-	 * @see ru.artem.phd.opm.model.ObjectProcessDiagram
+	 * @see ru.artem.phd.opm.model.OPMObjectProcessDiagram
 	 * @generated
 	 */
-	EClass getObjectProcessDiagram();
+	EClass getOPMObjectProcessDiagram();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link ru.artem.phd.opm.model.ObjectProcessDiagram#getObjects <em>Objects</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Objects</em>'.
-	 * @see ru.artem.phd.opm.model.ObjectProcessDiagram#getObjects()
-	 * @see #getObjectProcessDiagram()
-	 * @generated
-	 */
-	EReference getObjectProcessDiagram_Objects();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link ru.artem.phd.opm.model.ObjectProcessDiagram#getProcesses <em>Processes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Processes</em>'.
-	 * @see ru.artem.phd.opm.model.ObjectProcessDiagram#getProcesses()
-	 * @see #getObjectProcessDiagram()
-	 * @generated
-	 */
-	EReference getObjectProcessDiagram_Processes();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link ru.artem.phd.opm.model.ObjectProcessDiagram#getLinks <em>Links</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ru.artem.phd.opm.model.OPMObjectProcessDiagram#getLinks <em>Links</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Links</em>'.
-	 * @see ru.artem.phd.opm.model.ObjectProcessDiagram#getLinks()
-	 * @see #getObjectProcessDiagram()
+	 * @see ru.artem.phd.opm.model.OPMObjectProcessDiagram#getLinks()
+	 * @see #getOPMObjectProcessDiagram()
 	 * @generated
 	 */
-	EReference getObjectProcessDiagram_Links();
+	EReference getOPMObjectProcessDiagram_Links();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link ru.artem.phd.opm.model.OPMObjectProcessDiagram#getThings <em>Things</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Things</em>'.
+	 * @see ru.artem.phd.opm.model.OPMObjectProcessDiagram#getThings()
+	 * @see #getOPMObjectProcessDiagram()
+	 * @generated
+	 */
+	EReference getOPMObjectProcessDiagram_Things();
 
 	/**
 	 * Returns the meta object for class '{@link ru.artem.phd.opm.model.OPMObject <em>Object</em>}'.
@@ -416,39 +452,6 @@ public interface OPMPackage extends EPackage {
 	EClass getOPMObject();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ru.artem.phd.opm.model.OPMObject#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see ru.artem.phd.opm.model.OPMObject#getName()
-	 * @see #getOPMObject()
-	 * @generated
-	 */
-	EAttribute getOPMObject_Name();
-
-	/**
-	 * Returns the meta object for the container reference '{@link ru.artem.phd.opm.model.OPMObject#getOpd <em>Opd</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Opd</em>'.
-	 * @see ru.artem.phd.opm.model.OPMObject#getOpd()
-	 * @see #getOPMObject()
-	 * @generated
-	 */
-	EReference getOPMObject_Opd();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ru.artem.phd.opm.model.OPMObject#getConstraints <em>Constraints</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Constraints</em>'.
-	 * @see ru.artem.phd.opm.model.OPMObject#getConstraints()
-	 * @see #getOPMObject()
-	 * @generated
-	 */
-	EAttribute getOPMObject_Constraints();
-
-	/**
 	 * Returns the meta object for class '{@link ru.artem.phd.opm.model.OPMProcess <em>Process</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -457,28 +460,6 @@ public interface OPMPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getOPMProcess();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ru.artem.phd.opm.model.OPMProcess#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see ru.artem.phd.opm.model.OPMProcess#getName()
-	 * @see #getOPMProcess()
-	 * @generated
-	 */
-	EAttribute getOPMProcess_Name();
-
-	/**
-	 * Returns the meta object for the container reference '{@link ru.artem.phd.opm.model.OPMProcess#getOpd <em>Opd</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Opd</em>'.
-	 * @see ru.artem.phd.opm.model.OPMProcess#getOpd()
-	 * @see #getOPMProcess()
-	 * @generated
-	 */
-	EReference getOPMProcess_Opd();
 
 	/**
 	 * Returns the meta object for class '{@link ru.artem.phd.opm.model.OPMLink <em>Link</em>}'.
@@ -491,21 +472,21 @@ public interface OPMPackage extends EPackage {
 	EClass getOPMLink();
 
 	/**
-	 * Returns the meta object for the container reference '{@link ru.artem.phd.opm.model.OPMLink#getOpm <em>Opm</em>}'.
+	 * Returns the meta object for the container reference '{@link ru.artem.phd.opm.model.OPMLink#getOpd <em>Opd</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Opm</em>'.
-	 * @see ru.artem.phd.opm.model.OPMLink#getOpm()
+	 * @return the meta object for the container reference '<em>Opd</em>'.
+	 * @see ru.artem.phd.opm.model.OPMLink#getOpd()
 	 * @see #getOPMLink()
 	 * @generated
 	 */
-	EReference getOPMLink_Opm();
+	EReference getOPMLink_Opd();
 
 	/**
-	 * Returns the meta object for the container reference '{@link ru.artem.phd.opm.model.OPMLink#getSource <em>Source</em>}'.
+	 * Returns the meta object for the reference '{@link ru.artem.phd.opm.model.OPMLink#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Source</em>'.
+	 * @return the meta object for the reference '<em>Source</em>'.
 	 * @see ru.artem.phd.opm.model.OPMLink#getSource()
 	 * @see #getOPMLink()
 	 * @generated
@@ -513,15 +494,26 @@ public interface OPMPackage extends EPackage {
 	EReference getOPMLink_Source();
 
 	/**
-	 * Returns the meta object for the container reference '{@link ru.artem.phd.opm.model.OPMLink#getTarget <em>Target</em>}'.
+	 * Returns the meta object for the reference '{@link ru.artem.phd.opm.model.OPMLink#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Target</em>'.
+	 * @return the meta object for the reference '<em>Target</em>'.
 	 * @see ru.artem.phd.opm.model.OPMLink#getTarget()
 	 * @see #getOPMLink()
 	 * @generated
 	 */
 	EReference getOPMLink_Target();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link ru.artem.phd.opm.model.OPMLink#getBendpoints <em>Bendpoints</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Bendpoints</em>'.
+	 * @see ru.artem.phd.opm.model.OPMLink#getBendpoints()
+	 * @see #getOPMLink()
+	 * @generated
+	 */
+	EAttribute getOPMLink_Bendpoints();
 
 	/**
 	 * Returns the meta object for class '{@link ru.artem.phd.opm.model.OPMThing <em>Thing</em>}'.
@@ -534,10 +526,10 @@ public interface OPMPackage extends EPackage {
 	EClass getOPMThing();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link ru.artem.phd.opm.model.OPMThing#getIncomingLinks <em>Incoming Links</em>}'.
+	 * Returns the meta object for the reference list '{@link ru.artem.phd.opm.model.OPMThing#getIncomingLinks <em>Incoming Links</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Incoming Links</em>'.
+	 * @return the meta object for the reference list '<em>Incoming Links</em>'.
 	 * @see ru.artem.phd.opm.model.OPMThing#getIncomingLinks()
 	 * @see #getOPMThing()
 	 * @generated
@@ -545,15 +537,48 @@ public interface OPMPackage extends EPackage {
 	EReference getOPMThing_IncomingLinks();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link ru.artem.phd.opm.model.OPMThing#getOutgoingLinks <em>Outgoing Links</em>}'.
+	 * Returns the meta object for the reference list '{@link ru.artem.phd.opm.model.OPMThing#getOutgoingLinks <em>Outgoing Links</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Outgoing Links</em>'.
+	 * @return the meta object for the reference list '<em>Outgoing Links</em>'.
 	 * @see ru.artem.phd.opm.model.OPMThing#getOutgoingLinks()
 	 * @see #getOPMThing()
 	 * @generated
 	 */
 	EReference getOPMThing_OutgoingLinks();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ru.artem.phd.opm.model.OPMThing#getConstraints <em>Constraints</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Constraints</em>'.
+	 * @see ru.artem.phd.opm.model.OPMThing#getConstraints()
+	 * @see #getOPMThing()
+	 * @generated
+	 */
+	EAttribute getOPMThing_Constraints();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ru.artem.phd.opm.model.OPMThing#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see ru.artem.phd.opm.model.OPMThing#getName()
+	 * @see #getOPMThing()
+	 * @generated
+	 */
+	EAttribute getOPMThing_Name();
+
+	/**
+	 * Returns the meta object for the container reference '{@link ru.artem.phd.opm.model.OPMThing#getOpd <em>Opd</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Opd</em>'.
+	 * @see ru.artem.phd.opm.model.OPMThing#getOpd()
+	 * @see #getOPMThing()
+	 * @generated
+	 */
+	EReference getOPMThing_Opd();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.draw2d.geometry.Rectangle <em>Rectangle</em>}'.
@@ -565,6 +590,17 @@ public interface OPMPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getRectangle();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.draw2d.geometry.Point <em>Point</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Point</em>'.
+	 * @see org.eclipse.draw2d.geometry.Point
+	 * @model instanceClass="org.eclipse.draw2d.geometry.Point"
+	 * @generated
+	 */
+	EDataType getPoint();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -590,30 +626,14 @@ public interface OPMPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link ru.artem.phd.opm.model.impl.ObjectProcessDiagramImpl <em>Object Process Diagram</em>}' class.
+		 * The meta object literal for the '{@link ru.artem.phd.opm.model.impl.OPMObjectProcessDiagramImpl <em>Object Process Diagram</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ru.artem.phd.opm.model.impl.ObjectProcessDiagramImpl
-		 * @see ru.artem.phd.opm.model.impl.OPMPackageImpl#getObjectProcessDiagram()
+		 * @see ru.artem.phd.opm.model.impl.OPMObjectProcessDiagramImpl
+		 * @see ru.artem.phd.opm.model.impl.OPMPackageImpl#getOPMObjectProcessDiagram()
 		 * @generated
 		 */
-		EClass OBJECT_PROCESS_DIAGRAM = eINSTANCE.getObjectProcessDiagram();
-
-		/**
-		 * The meta object literal for the '<em><b>Objects</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OBJECT_PROCESS_DIAGRAM__OBJECTS = eINSTANCE.getObjectProcessDiagram_Objects();
-
-		/**
-		 * The meta object literal for the '<em><b>Processes</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OBJECT_PROCESS_DIAGRAM__PROCESSES = eINSTANCE.getObjectProcessDiagram_Processes();
+		EClass OPM_OBJECT_PROCESS_DIAGRAM = eINSTANCE.getOPMObjectProcessDiagram();
 
 		/**
 		 * The meta object literal for the '<em><b>Links</b></em>' containment reference list feature.
@@ -621,7 +641,15 @@ public interface OPMPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OBJECT_PROCESS_DIAGRAM__LINKS = eINSTANCE.getObjectProcessDiagram_Links();
+		EReference OPM_OBJECT_PROCESS_DIAGRAM__LINKS = eINSTANCE.getOPMObjectProcessDiagram_Links();
+
+		/**
+		 * The meta object literal for the '<em><b>Things</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPM_OBJECT_PROCESS_DIAGRAM__THINGS = eINSTANCE.getOPMObjectProcessDiagram_Things();
 
 		/**
 		 * The meta object literal for the '{@link ru.artem.phd.opm.model.impl.OPMObjectImpl <em>Object</em>}' class.
@@ -634,30 +662,6 @@ public interface OPMPackage extends EPackage {
 		EClass OPM_OBJECT = eINSTANCE.getOPMObject();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute OPM_OBJECT__NAME = eINSTANCE.getOPMObject_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Opd</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OPM_OBJECT__OPD = eINSTANCE.getOPMObject_Opd();
-
-		/**
-		 * The meta object literal for the '<em><b>Constraints</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute OPM_OBJECT__CONSTRAINTS = eINSTANCE.getOPMObject_Constraints();
-
-		/**
 		 * The meta object literal for the '{@link ru.artem.phd.opm.model.impl.OPMProcessImpl <em>Process</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -666,22 +670,6 @@ public interface OPMPackage extends EPackage {
 		 * @generated
 		 */
 		EClass OPM_PROCESS = eINSTANCE.getOPMProcess();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute OPM_PROCESS__NAME = eINSTANCE.getOPMProcess_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Opd</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OPM_PROCESS__OPD = eINSTANCE.getOPMProcess_Opd();
 
 		/**
 		 * The meta object literal for the '{@link ru.artem.phd.opm.model.impl.OPMLinkImpl <em>Link</em>}' class.
@@ -694,15 +682,15 @@ public interface OPMPackage extends EPackage {
 		EClass OPM_LINK = eINSTANCE.getOPMLink();
 
 		/**
-		 * The meta object literal for the '<em><b>Opm</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Opd</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OPM_LINK__OPM = eINSTANCE.getOPMLink_Opm();
+		EReference OPM_LINK__OPD = eINSTANCE.getOPMLink_Opd();
 
 		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -710,12 +698,20 @@ public interface OPMPackage extends EPackage {
 		EReference OPM_LINK__SOURCE = eINSTANCE.getOPMLink_Source();
 
 		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference OPM_LINK__TARGET = eINSTANCE.getOPMLink_Target();
+
+		/**
+		 * The meta object literal for the '<em><b>Bendpoints</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OPM_LINK__BENDPOINTS = eINSTANCE.getOPMLink_Bendpoints();
 
 		/**
 		 * The meta object literal for the '{@link ru.artem.phd.opm.model.impl.OPMThingImpl <em>Thing</em>}' class.
@@ -728,7 +724,7 @@ public interface OPMPackage extends EPackage {
 		EClass OPM_THING = eINSTANCE.getOPMThing();
 
 		/**
-		 * The meta object literal for the '<em><b>Incoming Links</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Incoming Links</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -736,12 +732,36 @@ public interface OPMPackage extends EPackage {
 		EReference OPM_THING__INCOMING_LINKS = eINSTANCE.getOPMThing_IncomingLinks();
 
 		/**
-		 * The meta object literal for the '<em><b>Outgoing Links</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Outgoing Links</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference OPM_THING__OUTGOING_LINKS = eINSTANCE.getOPMThing_OutgoingLinks();
+
+		/**
+		 * The meta object literal for the '<em><b>Constraints</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OPM_THING__CONSTRAINTS = eINSTANCE.getOPMThing_Constraints();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OPM_THING__NAME = eINSTANCE.getOPMThing_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Opd</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPM_THING__OPD = eINSTANCE.getOPMThing_Opd();
 
 		/**
 		 * The meta object literal for the '<em>Rectangle</em>' data type.
@@ -752,6 +772,16 @@ public interface OPMPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType RECTANGLE = eINSTANCE.getRectangle();
+
+		/**
+		 * The meta object literal for the '<em>Point</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.draw2d.geometry.Point
+		 * @see ru.artem.phd.opm.model.impl.OPMPackageImpl#getPoint()
+		 * @generated
+		 */
+		EDataType POINT = eINSTANCE.getPoint();
 
 	}
 

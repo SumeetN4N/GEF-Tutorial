@@ -2,6 +2,7 @@
  */
 package ru.artem.phd.opm.model.impl;
 
+import org.eclipse.draw2d.geometry.Point;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -56,7 +57,7 @@ public class OPMFactoryImpl extends EFactoryImpl implements OPMFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case OPMPackage.OBJECT_PROCESS_DIAGRAM: return createObjectProcessDiagram();
+			case OPMPackage.OPM_OBJECT_PROCESS_DIAGRAM: return createOPMObjectProcessDiagram();
 			case OPMPackage.OPM_OBJECT: return createOPMObject();
 			case OPMPackage.OPM_PROCESS: return createOPMProcess();
 			case OPMPackage.OPM_LINK: return createOPMLink();
@@ -75,6 +76,8 @@ public class OPMFactoryImpl extends EFactoryImpl implements OPMFactory {
 		switch (eDataType.getClassifierID()) {
 			case OPMPackage.RECTANGLE:
 				return createRectangleFromString(eDataType, initialValue);
+			case OPMPackage.POINT:
+				return createPointFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -89,18 +92,21 @@ public class OPMFactoryImpl extends EFactoryImpl implements OPMFactory {
 		switch (eDataType.getClassifierID()) {
 			case OPMPackage.RECTANGLE:
 				return convertRectangleToString(eDataType, instanceValue);
+			case OPMPackage.POINT:
+				return convertPointToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ObjectProcessDiagram createObjectProcessDiagram() {
-		ObjectProcessDiagramImpl objectProcessDiagram = new ObjectProcessDiagramImpl();
-		return objectProcessDiagram;
+	public OPMObjectProcessDiagram createOPMObjectProcessDiagram() {
+		OPMObjectProcessDiagramImpl opmObjectProcessDiagram = new OPMObjectProcessDiagramImpl();
+		return opmObjectProcessDiagram;
 	}
 
 	/**
@@ -177,6 +183,24 @@ public class OPMFactoryImpl extends EFactoryImpl implements OPMFactory {
 			return null;
 		Rectangle rect = (Rectangle) instanceValue;
 		return rect.x + "," + rect.y + "," + rect.width + "," + rect.height;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Point createPointFromString(EDataType eDataType, String initialValue) {
+		return (Point)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertPointToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**
